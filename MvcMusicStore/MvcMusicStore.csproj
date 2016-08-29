@@ -199,12 +199,21 @@
     <Compile Include="Models\SampleData.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Samples\AjaxForm\AjaxFormController.cs" />
+    <Compile Include="Samples\Autocomplete\AutocompleteController.cs" />
+    <Compile Include="Samples\ClientValidation\Attribute\MaxWordsAttribute.cs" />
+    <Compile Include="Samples\SpecifyingViews\SampleController.cs" />
+    <Compile Include="Samples\Templates\TemplatesController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\MvcMusicStore.mdf" />
     <Content Include="App_Data\MvcMusicStore_log.ldf">
       <DependentUpon>MvcMusicStore.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\Images\ajax-loader.gif" />
+    <Content Include="Content\Images\home-showcase.png" />
+    <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\placeholder.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -262,6 +271,10 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Samples\AjaxForm\MusicScripts.js" />
+    <Content Include="Samples\Autocomplete\MusicScripts.js" />
+    <Content Include="Samples\ClientValidation\Script\MaxWordsScript.js" />
+    <Content Include="Samples\Templates\MusicScripts.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -276,6 +289,7 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\mustache.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -317,6 +331,12 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Store\Details.cshtml" />
     <Content Include="Views\Store\Index.cshtml" />
+    <Content Include="Views\Home\_DailyDeal.cshtml" />
+    <Content Include="Views\AjaxForm\Index.cshtml" />
+    <Content Include="Views\AjaxForm\_ArtistSearch.cshtml" />
+    <Content Include="Views\Autocomplete\Index.cshtml" />
+    <Content Include="Views\Autocomplete\_ArtistSearch.cshtml" />
+    <Content Include="Views\Templates\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

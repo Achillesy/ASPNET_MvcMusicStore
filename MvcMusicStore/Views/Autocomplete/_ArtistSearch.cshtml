@@ -1,0 +1,9 @@
+@model IEnumerable<MvcMusicStore.Models.Artist>
+
+<div id="searchresults">
+    <ul>
+        @foreach (var item in Model) { 
+            <li>@item.Name</li>
+        }
+    </ul>
+</div>
