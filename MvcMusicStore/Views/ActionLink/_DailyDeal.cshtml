@@ -1,0 +1,13 @@
+@model MvcMusicStore.Models.Album
+
+<p>
+    <img alt="@Model.Title" src="@Model.AlbumArtUrl" />
+</p>
+<p>
+    <em>Artist:</em>
+    @Model.Artist.Name
+</p>
+<p>
+    <em>Price:</em>
+    @String.Format("{0:F}", Model.Price)
+</p>

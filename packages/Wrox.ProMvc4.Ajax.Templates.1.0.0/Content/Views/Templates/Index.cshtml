@@ -1,0 +1,48 @@
+@model List<MvcMusicStore.Models.Album>
+@{
+    ViewBag.Title = "ASP.NET MVC Music Store";
+}
+
+<link href="@Url.Content("~/Content/themes/base/jquery.ui.all.css")" rel="stylesheet" type="text/css" />    
+<script src="~/Scripts/jquery-1.6.2.min.js"></script>  
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="~/Scripts/jquery-ui.min.js"></script>
+<script src="~/Scripts/mustache.js"></script>
+
+<div id="promotion">
+</div>
+
+<form id="artistSearch" method="get" action="@Url.Action("ArtistSearch", "Home")">
+   <input type="text" name="q"
+          data-autocomplete-source="@Url.Action("QuickSearch", "Home")" />
+   <input type="submit" value="search" />
+   <img id="ajax-loader" src="~/Content/Images/ajax-loader.gif"
+        style="display:none"/>
+</form>
+
+<script id="artistTemplate" type="text/html">
+    <ul>
+        {{#artists}}
+            <li>{{Name}}</li>
+        {{/artists}}
+   </ul>    
+</script>
+
+<div id="searchresults">
+
+</div>
+
+<br />
+<br />
+<h3>
+    <em>Fresh</em> off the grill</h3>
+<ul id="album-list">
+    @foreach (var album in Model)
+    {
+        <li><a href="@Url.Action("Details", "Store", new { id = album.AlbumId })">
+            <img alt="@album.Title" src="@album.AlbumArtUrl" />
+            <span>@album.Title</span> </a></li>
+    }
+</ul>
+<div style="clear: both;" />
+
