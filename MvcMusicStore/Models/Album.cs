@@ -2,7 +2,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 using System.Collections.Generic;
-using MvcMusicStore.Samples;
 
 namespace MvcMusicStore.Models
 {
@@ -20,7 +19,6 @@ namespace MvcMusicStore.Models
 
         [Required(ErrorMessage = "An Album Title is required")]
         [StringLength(160)]
-        [MaxWords(10)]
         public string Title { get; set; }
 
         [Required(ErrorMessage = "Price is required")]

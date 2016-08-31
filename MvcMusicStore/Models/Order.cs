@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MvcMusicStore.Validation;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
@@ -25,6 +26,7 @@ namespace MvcMusicStore.Models
         [Required(ErrorMessage = "Last Name is required")]
         [DisplayName("Last Name")]
         [StringLength(160)]
+        [MaxWords(10)]
         public string LastName { get; set; }
 
         [Required(ErrorMessage = "Address is required")]

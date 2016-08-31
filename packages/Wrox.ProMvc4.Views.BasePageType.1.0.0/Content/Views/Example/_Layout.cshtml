@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Sample View</title></head>
+<body>
+<h1>@ViewBag.Message</h1>
+<p>
+    @RenderBody()
+</p>
+<footer>
+    @RenderSection("Footer", @<h2>Default Footer Content!</h2>)
+</footer>
+</body>
+</html>

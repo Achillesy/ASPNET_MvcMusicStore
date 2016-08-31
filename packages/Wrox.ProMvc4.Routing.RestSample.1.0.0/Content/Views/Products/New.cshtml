@@ -1,0 +1,25 @@
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>New</h2>
+
+<table>
+    <tr>
+        <td>Action</td><td>New</td>
+    </tr>
+    <tr>
+        <td>Resource</td><td>Products</td>
+    </tr>
+    <tr>
+        <td>URL</td><td>/Products/New</td>
+    </tr>
+</table>
+
+<h3>Rest URLs samples</h3>
+<ul>
+    <li>@Html.RouteLink(Url.RouteUrl(new {controller="products", action="index"}), new {controller="products", action="index"})</li>
+    <li>@Html.RouteLink(Url.RouteUrl(new {controller="products", action="new"}), new {controller="products", action="new"})</li>
+    <li>@Html.RouteLink(Url.RouteUrl(new { controller = "products", action = "show", id = 123 }), new { controller = "products", action = "show", id = 123 })</li>
+    <li>@Html.RouteLink(Url.RouteUrl(new { controller = "products", action = "edit", id = 123 }), new { controller = "products", action = "edit", id = 123 })</li>
+</ul>

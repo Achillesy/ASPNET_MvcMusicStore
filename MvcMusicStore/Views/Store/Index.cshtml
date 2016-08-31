@@ -1,17 +1,34 @@
-﻿@model IEnumerable<MvcMusicStore.Models.Genre>
+@model IEnumerable<MvcMusicStore.Models.Album>
 
 @{
-    ViewBag.Title = "Store";
+    ViewBag.Title = "Index";
 }
 
-<h3>Browse Genres</h3>
+<h2>A Very Simple Store</h2>
 
-<p>
-    Select from @Model.Count() genres:
-</p>
-<ul>
-    @foreach (var genre in Model)
-    {
-        <li>@genre.Name</li>
-    }
-</ul>
+<table>
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>
+            Price
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.ActionLink("Buy", "Buy", new { id=item.AlbumId })
+        </td>
+    </tr>
+}
+
+</table>

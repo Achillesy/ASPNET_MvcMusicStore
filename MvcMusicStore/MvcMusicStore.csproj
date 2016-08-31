@@ -40,6 +40,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="RouteMagic, Version=1.2.0.0, Culture=neutral, PublicKeyToken=84b59be021aa4cee, processorArchitecture=MSIL">
+      <HintPath>..\packages\RouteMagic.1.2\lib\net40\RouteMagic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -114,6 +118,10 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="WebActivator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivator.1.0.0.0\lib\WebActivator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
@@ -180,6 +188,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Routes.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -199,11 +208,22 @@
     <Compile Include="Models\SampleData.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Samples\ActionLink\ActionLinkController.cs" />
     <Compile Include="Samples\AjaxForm\AjaxFormController.cs" />
+    <Compile Include="Samples\AlbumList\AlbumsController.cs" />
     <Compile Include="Samples\Autocomplete\AutocompleteController.cs" />
     <Compile Include="Samples\ClientValidation\Attribute\MaxWordsAttribute.cs" />
+    <Compile Include="Samples\CustomWebViewPage\CustomWebViewPage.cs" />
+    <Compile Include="Samples\CustomWebViewPage\ExampleController.cs" />
+    <Compile Include="Samples\RestfulRouting\AppStart_RestRouteRegistration.cs" />
+    <Compile Include="Samples\RestfulRouting\ProductsController.cs" />
+    <Compile Include="Samples\RestfulRouting\RestRoute.cs" />
+    <Compile Include="Samples\ShoppingCartViewModel\ProductModel.cs" />
+    <Compile Include="Samples\ShoppingCartViewModel\ShoppingCartController.cs" />
+    <Compile Include="Samples\ShoppingCartViewModel\ShoppingCartViewModel.cs" />
     <Compile Include="Samples\SpecifyingViews\SampleController.cs" />
     <Compile Include="Samples\Templates\TemplatesController.cs" />
+    <Compile Include="Samples\Validation\MaxWordsAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\MvcMusicStore.mdf" />
@@ -270,6 +290,9 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Samples\ShoppingCartViewModel\ProductModel.cs.pp" />
+    <Content Include="Samples\ShoppingCartViewModel\ShoppingCartController.cs.pp" />
+    <Content Include="Samples\ShoppingCartViewModel\ShoppingCartViewModel.cs.pp" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Samples\AjaxForm\MusicScripts.js" />
     <Content Include="Samples\Autocomplete\MusicScripts.js" />
@@ -337,6 +360,24 @@
     <Content Include="Views\Autocomplete\Index.cshtml" />
     <Content Include="Views\Autocomplete\_ArtistSearch.cshtml" />
     <Content Include="Views\Templates\Index.cshtml" />
+    <Content Include="Views\Example\Index.cshtml" />
+    <Content Include="Views\Sample\Index.cshtml" />
+    <Content Include="Views\Sample\Message.cshtml" />
+    <Content Include="Views\Sample\NotIndex.cshtml" />
+    <Content Include="Views\Sample\PartialViewDemo.cshtml" />
+    <Content Include="Views\Albums\ListStronglyTyped.cshtml.pp" />
+    <Content Include="Views\Albums\ListWeaklyTyped.cshtml" />
+    <Content Include="Views\Albums\ListWeaklyTyped.cshtml.pp" />
+    <Content Include="Views\Albums\ListStronglyTyped.cshtml" />
+    <Content Include="Views\Store\Buy.cshtml" />
+    <Content Include="Views\ActionLink\Index.cshtml" />
+    <Content Include="Views\ActionLink\_DailyDeal.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Products\New.cshtml" />
+    <Content Include="Views\Products\Show.cshtml" />
+    <Content Include="Views\ShoppingCart\Index.cshtml" />
+    <Content Include="Views\ShoppingCart\Index.cshtml.pp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

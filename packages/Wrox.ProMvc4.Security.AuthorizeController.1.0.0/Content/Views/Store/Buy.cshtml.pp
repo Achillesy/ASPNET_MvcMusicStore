@@ -1,0 +1,7 @@
+@model $rootnamespace$.Models.Album
+
+@{
+    ViewBag.Title = "Buy";
+}
+
+<h2>You just bought @Model.Title for @Model.Price</h2>

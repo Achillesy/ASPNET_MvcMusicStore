@@ -1,0 +1,45 @@
+@model List<MvcMusicStore.Models.Album>
+@{
+    ViewBag.Title = "ASP.NET MVC Music Store";
+}
+
+<script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+
+<div id="promotion">
+</div>
+
+<form id="artistSearch" method="get" action="@Url.Action("ArtistSearch", "Home")">
+    <input type="text" name="q" data-autocomplete-source="@Url.Action("QuickSearch", "Home")" />
+    <input type="submit" value="search" />
+    <img id="ajax-loader" src="@Url.Content("~/Content/Images/ajax-loader.gif")" style="display:none"/>
+</form>
+
+
+<script id="artistTemplate" type="text/x-jquery-tmpl">
+    <li>${Name}</li>
+</script>
+
+
+<br />
+<br />
+<h3>
+    <em>Fresh</em> off the grill</h3>
+<ul id="album-list">
+    @foreach (var album in Model)
+    {
+        <li><a href="@Url.Action("Details", "Store", new { id = album.AlbumId })">
+            <img alt="@album.Title" src="@album.AlbumArtUrl" />
+            <span>@album.Title</span> </a></li>
+    }
+</ul>
+<div style="clear: both;" />
+<div id="dailydeal">
+    @Ajax.ActionLink("Click here to see today's special!",
+                     "DailyDeal",
+                     new AjaxOptions
+                     {
+                         UpdateTargetId = "dailydeal",
+                         InsertionMode = InsertionMode.Replace,
+                         HttpMethod = "GET",
+                     })
+</div>
